@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/bg-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(2px);
+}
+
+form {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(245, 241, 241, 0.15);
+    padding: 30px 28px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+}
+
+form input {
+    padding: 10px 14px;
+    border: none;
+    outline: none;
+    color: black;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-bottom: 6px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+form input:focus {
+    box-shadow: 0 0 0 2px blueviolet;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    display: block;
+    margin-top: 4px;
+}
+
+a:hover {
+    color: blue;
+    transition: color 0.2s ease-in-out;
+}
+
+.login-setup {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-setup button {
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: skyblue;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: box-shadow 0.2s ease-in-out, transform 0.15s ease-in-out;
+    
+}
+
+.login-setup button::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f2f6";
+}
+
+.login-setup button:hover {
+    color: black;
+    box-shadow: rgb(14, 14, 13) 3px 3px 10px;
+    background-color: blue;
+}
+
+.login-setup button:active {
+    transform: scale(0.97);
+}
+
+.other-login p {
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.social-button {
+    display: flex;
+    gap: 8px;
+}
+
+.social-button button {
+    flex: 1;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: filter 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.facebook-button {
+    background: #1877f2;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.facebook-button::before {
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    content: "\f39e";
+}
+
+.insta-button {
+    
+    color: white;
+    border: none;
+    outline: none;
+
+     background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045);
+
+    border: none;
+}
+
+.insta-button::before {
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    content: "\f16d";
+}
+
+.insta-button:hover{
+
+    background: maroon;
+    filter: brightness(1.1);
+    color: black;
+}
+
+
+
+.facebook-button:hover {
+    filter: brightness(1.1);
+    color: black;
+    background: rgb(40, 20, 63);
+}
+
+
+.insta-button:active,
+.facebook-button:active {
+    transform: scale(0.95);
+    filter: brightness(0.85);
+}
+
+p {
+    text-align: center;
+    color: white;
+    padding: 10px 0 0 0;
+    font-size: 14px;
+}
+
+p a {
+    color: skyblue;
+    display: inline;
+    margin-top: 0;
+}
+
+p a:hover {
+    color:blue;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group input {
+    padding-left: 40px;  /* was padding-right — text now clears the icon on the left */
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 14px;           /* was right */
+    top: 50%;
+    transform: translateY(-60%);
+    color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.input-group input:focus ~ .icon {
+    color: rgb(115, 191, 235);
+}
